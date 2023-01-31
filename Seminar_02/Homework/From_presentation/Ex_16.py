@@ -4,7 +4,7 @@
 user_input = int(input('Введите целое положительное число: '))
 two_pow = 1
 power = 1
-while two_pow < user_input:
+while two_pow <= user_input:
     print(two_pow, end=' ')
     two_pow = 2 ** power
     power += 1

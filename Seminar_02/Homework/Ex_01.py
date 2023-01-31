@@ -3,15 +3,17 @@
 - 6782 -> 23
 - 0,56 -> 11
 """
-# var1
-"""s = input()
+
+# var1 - через строки
+s = input()
 digit_sum = 0
 for i in range(len(s)):
     if s[i].isdigit():
         digit_sum += int(s[i])
-print(digit_sum)"""
+print(digit_sum)
 
-# var2
+
+# var2 - через десятичные числа
 from decimal import *
 user_num = abs(Decimal(input()))
 digits_sum = 0

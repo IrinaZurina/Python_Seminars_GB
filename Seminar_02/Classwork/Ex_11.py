@@ -3,7 +3,7 @@
 выведите такое число n, что φ(n)=A. Если А не
 является числом Фибоначчи, выведите число -1."""
 # var1
-'''user_input = int(input('Введите целое положительное число: '))
+"""user_input = int(input('Введите целое положительное число: '))
 fibo_nums = [0, 1]
 n = fibo_nums[1]
 
@@ -13,7 +13,7 @@ while n < user_input:
 if user_input in fibo_nums:
     print(f'{user_input} - число Фиббоначи №{fibo_nums.index(user_input) + 1}')
 else:
-    print(f'{user_input} не является числом Фиббоначи')'''
+    print(f'{user_input} не является числом Фиббоначи')"""
 
 # var 2
 user_input = int(input('Введите целое положительное число: '))

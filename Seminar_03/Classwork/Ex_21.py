@@ -7,6 +7,6 @@ user_dict = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII
              {"V":"S009"}, {" VIII": "S007"}]
 values = set()
 for i in range(len(user_dict)):
-    for key in user_dict[i].keys():
+    for value in user_dict[i].values():
         values.add(user_dict[i][key])
 print(f'Множество уникальных значений: {values}')

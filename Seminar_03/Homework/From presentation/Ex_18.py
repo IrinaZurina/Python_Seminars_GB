@@ -6,17 +6,16 @@
 from random import randint
 size = int(input('Введите размер списка: '))
 nums_tuple = tuple(randint(1, size) for _ in range(size))
-print(nums_tuple)
+print(*nums_tuple)
 num_X = int(input('Введите искомое число: '))
-num_X_less = num_X_more = num_X
+mod = 0
 flag = False
-while not flag:
-    if num_X_more in nums_tuple:
-        print(num_X_more)
-        flag = True
-    elif num_X_less in nums_tuple:
-        print(num_X_less)
-        flag = True
-    else:
-        num_X_less -= 1
-        num_X_more += 1
+for _ in range(len(nums_tuple)):
+    for i in nums_tuple:
+        if i == num_X - mod or i == num_X + mod:
+            print(i)
+            flag = True
+            break
+    mod += 1
+    if flag:
+        break

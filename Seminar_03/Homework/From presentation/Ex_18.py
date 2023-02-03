@@ -5,17 +5,17 @@
 
 from random import randint
 size = int(input('Введите размер списка: '))
-nums_tuple = tuple(randint(1, size) for _ in range(size))
-print(*nums_tuple)
+numbers = tuple(randint(1, size) for _ in range(size))
+print(*numbers)
 num_X = int(input('Введите искомое число: '))
 mod = 0
 flag = False
-for _ in range(len(nums_tuple)):
-    for i in nums_tuple:
+for _ in range(len(set(numbers))):
+    for i in set(numbers):
         if i == num_X - mod or i == num_X + mod:
             print(i)
             flag = True
             break
-    mod += 1
     if flag:
         break
+    mod += 1

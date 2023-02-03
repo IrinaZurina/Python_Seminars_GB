@@ -10,7 +10,7 @@ scores = {1: {'A', 'E', 'I', 'L', 'N', 'O', 'R', 'S', 'T', 'U', 'А', 'В', 'Е'
           8: {'J', 'X', 'Ш', 'Э', 'Ю'},
           10: {'Q', 'Z', 'Ф', 'Щ', 'Ъ'}}
 sum_score = 0
-for letter in list(input().upper()):
+for letter in input('Введите слово: ').upper():
     for key in scores.keys():
         if letter in scores[key]:
             sum_score += key

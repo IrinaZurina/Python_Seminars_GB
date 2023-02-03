@@ -11,7 +11,7 @@ bin_list.append(str(user_num_copy % 2))
 bin_num = int(''.join(reversed(bin_list)))
 print(f'{user_num} -> {bin_num}')
 
-#var 2 - просто вывести распакованный список без пробелов
+#var 2 - вывести распакованный список без пробелов
 user_num = int(input('Введите целое положительное число: '))
 user_num_copy = user_num
 bin_list = []

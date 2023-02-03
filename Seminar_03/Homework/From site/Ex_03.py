@@ -11,4 +11,4 @@ for num in num_list:
         digits_sum += int(str(num)[i])
     digits_sum_list.append(digits_sum)
 print(digits_sum_list)
-print(max(digits_sum_list))
+print(max(digits_sum_list) - min(digits_sum_list))

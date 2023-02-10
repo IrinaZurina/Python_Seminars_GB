@@ -6,11 +6,12 @@ from random import randint
 
 
 def change_my_marks(marks):
-    max_mark = '5'
-    min_mark = '1'
-    return marks.replace(max_mark, min_mark, marks.count(max_mark))
+    max_mark = max(marks)
+    min_mark = min(marks)
+    marks = list(map(str, marks))
+    return ' '.join(marks).replace(str(max_mark), str(min_mark), marks.count(str(max_mark)))
 
 
-marks_list = ''.join(str(randint(1, 5)) for _ in range(int(input('Введите количество оценок: '))))
-print(*list(marks_list))
-print(*list(change_my_marks(marks_list)))
+marks_list = [randint(1, 5) for _ in range(int(input('Введите количество оценок: ')))]
+print(*marks_list)
+print(change_my_marks(marks_list))

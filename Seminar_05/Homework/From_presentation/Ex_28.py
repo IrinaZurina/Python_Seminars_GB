@@ -3,12 +3,11 @@
 
 
 def sum_1(a, b):
+    if b > a:
+        a, b = b, a
     if b == 0:
         return a
-    elif b == 1:
-        return a + 1
-    else:
-        return 1 + sum_1(a, b - 1)
+    return 1 + sum_1(a, b - 1)
 
 
 print(sum_1(int(input('Введите первое число: ')), int(input('Введите второе число: '))))

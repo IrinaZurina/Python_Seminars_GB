@@ -6,25 +6,9 @@
 строке, разделяя пробелами. Каждая пара должна быть выведена только один раз (перестановка чисел новую
 пару не дает). """
 
+from module import friendly_nums
 
-def sum_of_div(n):
-    sum_div = 1
-    for i in range(2, n // 2 + 1):
-        if n % i == 0:
-            sum_div += i
-    return sum_div
+friendly_nums(int(input('Введите верхнюю границу: ')))
 
 
-num = int(input('Введите число k: '))
-skip = None
-for j in range(2, num):
-    if j == skip:
-        continue
-    sum_j = sum_of_div(j)
-    for k in range(2, num):
-        if k == j:
-            continue
-        sum_k = sum_of_div(k)
-        if sum_k == j and sum_j == k:
-            print(j, k)
-            skip = k
+

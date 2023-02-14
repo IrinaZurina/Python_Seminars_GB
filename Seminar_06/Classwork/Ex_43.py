@@ -3,11 +3,8 @@
 чисел. Все числа списка находятся на разных строках. """
 
 from random import randint
+from module import count_pairs
 
 num_list = [randint(1, 10) for _ in range(int(input('Введите размер массива: ')))]
 print(*num_list)
-nums_pairs_count = {}
-for num in set(num_list):
-    nums_pairs_count.setdefault(num, num_list.count(num) // 2)
-print(nums_pairs_count)
-print(sum(nums_pairs_count.values()))
+print(count_pairs(num_list))

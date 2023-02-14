@@ -2,11 +2,8 @@
 количество элементов, у которых два соседних и, при этом, оба соседних элемента меньше данного. Сначала
 вводится число N — количество элементов в массиве Далее записаны N чисел — элементы массива. Массив
 состоит из целых чисел. """
+from module import create_list, max_of_3
 
-from random import randint
-
-num_list = [randint(1, 20) for _ in range(int(input('Введите размер массива: ')))]
+num_list = create_list(int(input('Введите размер массива: ')))
 print(*num_list)
-for i in range(1, len(num_list) - 1):
-    if num_list[i -1] <  num_list[i] and num_list[i + 1] < num_list[i]:
-        print(num_list[i], end=' ')
+print(max_of_3(num_list))

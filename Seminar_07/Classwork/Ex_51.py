@@ -5,9 +5,11 @@
 
 
 def same_by(characteristic, objects: list):
-    result_list = []
-    for i in range(len(objects) - 1):   # на каждой итерации добавляем в список true/false
-        result_list.append(characteristic(objects[i]) == characteristic(objects[i + 1]))
+    if len(objects) == 0:
+        return True
+    char_compare = characteristic(objects[0])   # находим значение хар-ки первого эл-та
+    # сравниваем значения хар-к всех эл-тов
+    result_list = list(map(lambda x: characteristic(x) == char_compare, objects))
     return all(result_list)
 
 

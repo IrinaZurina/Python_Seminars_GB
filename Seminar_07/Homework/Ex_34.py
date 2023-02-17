@@ -6,13 +6,10 @@
 
 def find_rhythm(text: str):
     phrases = text.split()   # разбили текст на фразы
-    vowels = 'аеиоуэюя'   # строка с гласными
     phrases_vow = []   # пустой список для фраз, очищенных от согласных
     for i in phrases:   # каждую фразу фильтруем от согласных
-        phrases_vow.append(list(filter(lambda x: x in vowels, list(i))))
-    result_list = []   # пустой список для булевых значений
-    for i in range(len(phrases_vow) - 1):   # сравниваем кол-во гласных во фразах
-        result_list.append(len(phrases_vow[i]) == len(phrases_vow[i + 1]))
+        phrases_vow.append(list(filter(lambda x: x in 'аеиоуэюя', list(i))))
+    result_list = map(lambda x: len(x) == len(phrases_vow[0]), phrases_vow)
     return all(result_list)
 
 
